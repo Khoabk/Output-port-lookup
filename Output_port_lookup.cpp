@@ -117,7 +117,7 @@ void Write(//Input
 
 
 void Read(//Input
-		ap_uint<1>     	        m_axis_tready,
+		ap_uint<1>     	                m_axis_tready,
 		ap_uint<1> 		                reset,
 
 		//Output
