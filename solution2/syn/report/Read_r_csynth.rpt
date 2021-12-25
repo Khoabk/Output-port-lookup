@@ -1,0 +1,194 @@
+
+
+================================================================
+== Vivado HLS Report for 'Read_r'
+================================================================
+* Date:           Sat Dec 25 12:03:29 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Output_port_lookup
+* Solution:       solution2
+* Product family: virtex7
+* Target device:  xc7vx690tffg1761-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.167|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    2|    2|    2|    2|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  |
++-----------------+---------+-------+--------+--------+
+|DSP              |        -|      -|       -|       -|
+|Expression       |        -|      -|       0|     320|
+|FIFO             |        -|      -|       -|       -|
+|Instance         |        -|      -|       -|       -|
+|Memory           |        -|      -|       -|       -|
+|Multiplexer      |        -|      -|       -|     126|
+|Register         |        -|      -|     430|       -|
++-----------------+---------+-------+--------+--------+
+|Total            |        0|      0|     430|     446|
++-----------------+---------+-------+--------+--------+
+|Available        |     2940|   3600|  866400|  433200|
++-----------------+---------+-------+--------+--------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |
++-----------------+---------+-------+--------+--------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+-------+---+-----+------------+------------+
+    |          Variable Name          | Operation| DSP48E| FF| LUT | Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+-------+---+-----+------------+------------+
+    |Queue_rd_pos_V_assi_1_fu_384_p2  |     +    |      0|  0|   13|           4|           1|
+    |Queue_rd_pos_V_assi_fu_361_p2    |     +    |      0|  0|   13|           4|           1|
+    |Queue_size_assign_i_2_fu_372_p2  |     +    |      0|  0|   39|          32|           2|
+    |Queue_size_assign_i_fu_349_p2    |     +    |      0|  0|   39|          32|           2|
+    |brmerge_demorgan_i_fu_214_p2     |    and   |      0|  0|    2|           1|           1|
+    |dst_port_rd_V_fu_312_p2          |    and   |      0|  0|    2|           1|           1|
+    |internal_m_valid_V_fu_338_p2     |    and   |      0|  0|    2|           1|           1|
+    |r_V_fu_344_p2                    |    and   |      0|  0|    2|           1|           1|
+    |sel_tmp3_i_fu_231_p2             |    and   |      0|  0|    2|           1|           1|
+    |sel_tmp4_i_fu_260_p2             |    and   |      0|  0|    2|           1|           1|
+    |sel_tmp7_i_fu_272_p2             |    and   |      0|  0|    2|           1|           1|
+    |tmp1_fu_255_p2                   |    and   |      0|  0|    2|           1|           1|
+    |tmp2_fu_249_p2                   |    and   |      0|  0|    2|           1|           1|
+    |tmp_fu_243_p2                    |    and   |      0|  0|    2|           1|           1|
+    |sel_tmp2_i_fu_225_p2             |   icmp   |      0|  0|    8|           2|           1|
+    |sel_tmp_i_fu_219_p2              |   icmp   |      0|  0|    8|           2|           1|
+    |this_assign_s_fu_180_p2          |   icmp   |      0|  0|   18|          32|           1|
+    |val_assign_fu_174_p2             |   icmp   |      0|  0|   18|          32|           1|
+    |not_sel_tmp7_i_fu_292_p2         |    or    |      0|  0|    2|           1|           1|
+    |p_state_1_flag_1_i_fu_318_p2     |    or    |      0|  0|    2|           1|           1|
+    |p_state_1_new_1_i_fu_323_p2      |    or    |      0|  0|    2|           1|           1|
+    |send_packet_V_fu_298_p2          |    or    |      0|  0|    2|           1|           1|
+    |state_1_flag_1_i_fu_278_p3       |  select  |      0|  0|    2|           1|           1|
+    |sth_V_fu_304_p3                  |  select  |      0|  0|  128|           1|         128|
+    |not_sel_tmp3_i_fu_237_p2         |    xor   |      0|  0|    2|           1|           2|
+    |sel_tmp2_i_not_fu_286_p2         |    xor   |      0|  0|    2|           1|           2|
+    |sel_tmp6_i_fu_266_p2             |    xor   |      0|  0|    2|           1|           2|
+    +---------------------------------+----------+-------+---+-----+------------+------------+
+    |Total                            |          |      0|  0|  320|         159|         159|
+    +---------------------------------+----------+-------+---+-----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |Queue_ap_axis_size_o  |  15|          3|   32|         96|
+    |Queue_rd_pos_V_1_o    |  15|          3|    4|         12|
+    |Queue_rd_pos_V_o      |  15|          3|    4|         12|
+    |Queue_size_o          |  15|          3|   32|         96|
+    |ap_NS_fsm             |  21|          4|    1|          4|
+    |ap_return_0           |   9|          2|  256|        512|
+    |ap_return_1           |   9|          2|   32|         64|
+    |ap_return_2           |   9|          2|  128|        256|
+    |ap_return_3           |   9|          2|    1|          2|
+    |ap_return_4           |   9|          2|    1|          2|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 | 126|         26|  491|       1056|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------+-----+----+-----+-----------+
+    |             Name            |  FF | LUT| Bits| Const Bits|
+    +-----------------------------+-----+----+-----+-----------+
+    |Queue_rd_pos_V_1_lo_reg_452  |    4|   0|    4|          0|
+    |Queue_rd_pos_V_load_reg_462  |    4|   0|    4|          0|
+    |ap_CS_fsm                    |    3|   0|    3|          0|
+    |ap_return_0_preg             |  256|   0|  256|          0|
+    |ap_return_1_preg             |   32|   0|   32|          0|
+    |ap_return_2_preg             |  128|   0|  128|          0|
+    |ap_return_3_preg             |    1|   0|    1|          0|
+    |ap_return_4_preg             |    1|   0|    1|          0|
+    |state_1                      |    1|   0|   32|         31|
+    +-----------------------------+-----+----+-----+-----------+
+    |Total                        |  430|   0|  461|         31|
+    +-----------------------------+-----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+---------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |    Source Object    |    C Type    |
++------------------------------+-----+-----+------------+---------------------+--------------+
+|ap_clk                        |  in |    1| ap_ctrl_hs |         Read        | return value |
+|ap_rst                        |  in |    1| ap_ctrl_hs |         Read        | return value |
+|ap_start                      |  in |    1| ap_ctrl_hs |         Read        | return value |
+|ap_done                       | out |    1| ap_ctrl_hs |         Read        | return value |
+|ap_idle                       | out |    1| ap_ctrl_hs |         Read        | return value |
+|ap_ready                      | out |    1| ap_ctrl_hs |         Read        | return value |
+|ap_return_0                   | out |  256| ap_ctrl_hs |         Read        | return value |
+|ap_return_1                   | out |   32| ap_ctrl_hs |         Read        | return value |
+|ap_return_2                   | out |  128| ap_ctrl_hs |         Read        | return value |
+|ap_return_3                   | out |    1| ap_ctrl_hs |         Read        | return value |
+|ap_return_4                   | out |    1| ap_ctrl_hs |         Read        | return value |
+|m_axis_tready_V               |  in |    1|   ap_none  |   m_axis_tready_V   |    scalar    |
+|reset_V                       |  in |    1|   ap_none  |       reset_V       |    scalar    |
+|Queue_ap_axis_size_i          |  in |   32|   ap_ovld  |  Queue_ap_axis_size |    pointer   |
+|Queue_ap_axis_size_o          | out |   32|   ap_ovld  |  Queue_ap_axis_size |    pointer   |
+|Queue_ap_axis_size_o_ap_vld   | out |    1|   ap_ovld  |  Queue_ap_axis_size |    pointer   |
+|Queue_wr_pos_V_1              | out |    4|   ap_vld   |   Queue_wr_pos_V_1  |    pointer   |
+|Queue_wr_pos_V_1_ap_vld       | out |    1|   ap_vld   |   Queue_wr_pos_V_1  |    pointer   |
+|Queue_rd_pos_V_1_i            |  in |    4|   ap_ovld  |   Queue_rd_pos_V_1  |    pointer   |
+|Queue_rd_pos_V_1_o            | out |    4|   ap_ovld  |   Queue_rd_pos_V_1  |    pointer   |
+|Queue_rd_pos_V_1_o_ap_vld     | out |    1|   ap_ovld  |   Queue_rd_pos_V_1  |    pointer   |
+|Queue_size_i                  |  in |   32|   ap_ovld  |      Queue_size     |    pointer   |
+|Queue_size_o                  | out |   32|   ap_ovld  |      Queue_size     |    pointer   |
+|Queue_size_o_ap_vld           | out |    1|   ap_ovld  |      Queue_size     |    pointer   |
+|Queue_wr_pos_V                | out |    4|   ap_vld   |    Queue_wr_pos_V   |    pointer   |
+|Queue_wr_pos_V_ap_vld         | out |    1|   ap_vld   |    Queue_wr_pos_V   |    pointer   |
+|Queue_rd_pos_V_i              |  in |    4|   ap_ovld  |    Queue_rd_pos_V   |    pointer   |
+|Queue_rd_pos_V_o              | out |    4|   ap_ovld  |    Queue_rd_pos_V   |    pointer   |
+|Queue_rd_pos_V_o_ap_vld       | out |    1|   ap_ovld  |    Queue_rd_pos_V   |    pointer   |
+|Queue_buffer_packet_address0  | out |    4|  ap_memory | Queue_buffer_packet |     array    |
+|Queue_buffer_packet_ce0       | out |    1|  ap_memory | Queue_buffer_packet |     array    |
+|Queue_buffer_packet_q0        |  in |  417|  ap_memory | Queue_buffer_packet |     array    |
+|Queue_buffer_V_address0       | out |    4|  ap_memory |    Queue_buffer_V   |     array    |
+|Queue_buffer_V_ce0            | out |    1|  ap_memory |    Queue_buffer_V   |     array    |
+|Queue_buffer_V_q0             |  in |    8|  ap_memory |    Queue_buffer_V   |     array    |
++------------------------------+-----+-----+------------+---------------------+--------------+
+

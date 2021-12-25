@@ -1,0 +1,7 @@
+Running: xsim.dir/switch_output_port_lookup/xsimk -simmode gui -wdb switch_output_port_lookup.wdb -simrunnum 0 -socket 46703
+Design successfully loaded
+Design Loading Memory Usage: 33692 KB (Peak: 33700 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 127984 KB (Peak: 180964 KB)
+Simulation CPU Usage: 30 ms

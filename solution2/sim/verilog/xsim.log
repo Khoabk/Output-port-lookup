@@ -1,0 +1,133 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec 24 16:01:00 2021
+# Process ID: 19339
+# Current directory: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/switch_output_port_lookup/xsim_script.tcl}
+# Log file: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/xsim.log
+# Journal file: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/switch_output_port_lookup/xsim_script.tcl
+# xsim {switch_output_port_lookup} -autoloadwcfg -tclbatch {switch_output_port_lookup.tcl}
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+source switch_output_port_lookup.tcl
+## log_wave -r /
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set m_axis_tlast_group [add_wave_group m_axis_tlast(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tlast_V -into $m_axis_tlast_group -radix hex
+## set m_axis_tvalid_group [add_wave_group m_axis_tvalid(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tvalid_V -into $m_axis_tvalid_group -radix hex
+## set m_axis_tuser_group [add_wave_group m_axis_tuser(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tuser_V -into $m_axis_tuser_group -radix hex
+## set m_axis_tkeep_group [add_wave_group m_axis_tkeep(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tkeep_V -into $m_axis_tkeep_group -radix hex
+## set m_axis_tdata_group [add_wave_group m_axis_tdata(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tdata_V -into $m_axis_tdata_group -radix hex
+## set s_axis_tready_group [add_wave_group s_axis_tready(wire) -into $coutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tready_V -into $s_axis_tready_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set reset_group [add_wave_group reset(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/reset_V -into $reset_group -radix hex
+## set m_axis_tready_group [add_wave_group m_axis_tready(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/m_axis_tready_V -into $m_axis_tready_group -radix hex
+## set s_axis_tlast_group [add_wave_group s_axis_tlast(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tlast_V -into $s_axis_tlast_group -radix hex
+## set s_axis_tvalid_group [add_wave_group s_axis_tvalid(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tvalid_V -into $s_axis_tvalid_group -radix hex
+## set s_axis_tuser_group [add_wave_group s_axis_tuser(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tuser_V -into $s_axis_tuser_group -radix hex
+## set s_axis_tkeep_group [add_wave_group s_axis_tkeep(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tkeep_V -into $s_axis_tkeep_group -radix hex
+## set s_axis_tdata_group [add_wave_group s_axis_tdata(wire) -into $cinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/s_axis_tdata_V -into $s_axis_tdata_group -radix hex
+## set blocksiggroup [add_wave_group "Block-level IO Handshake" -into $designtopgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_start -into $blocksiggroup
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_done -into $blocksiggroup
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_idle -into $blocksiggroup
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_ready -into $blocksiggroup
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_rst -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_switch_output_port_lookup_top/AESL_inst_switch_output_port_lookup/ap_clk -into $clockgroup
+## set testbenchgroup [add_wave_group "Test Bench Signals"]
+## set tbinternalsiggroup [add_wave_group "Internal Signals" -into $testbenchgroup]
+## set tb_simstatus_group [add_wave_group "Simulation Status" -into $tbinternalsiggroup]
+## set tb_portdepth_group [add_wave_group "Port Depth" -into $tbinternalsiggroup]
+## add_wave /apatb_switch_output_port_lookup_top/AUTOTB_TRANSACTION_NUM -into $tb_simstatus_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/ready_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/done_cnt -into $tb_simstatus_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tdata_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tkeep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tuser_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tvalid_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tready_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_s_axis_tlast_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tdata_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tkeep_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tuser_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tvalid_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tready_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_m_axis_tlast_V -into $tb_portdepth_group -radix hex
+## add_wave /apatb_switch_output_port_lookup_top/LENGTH_reset_V -into $tb_portdepth_group -radix hex
+## set tbcoutputgroup [add_wave_group "C Outputs" -into $testbenchgroup]
+## set tb_m_axis_tlast_group [add_wave_group m_axis_tlast(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tlast_V -into $tb_m_axis_tlast_group -radix hex
+## set tb_m_axis_tvalid_group [add_wave_group m_axis_tvalid(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tvalid_V -into $tb_m_axis_tvalid_group -radix hex
+## set tb_m_axis_tuser_group [add_wave_group m_axis_tuser(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tuser_V -into $tb_m_axis_tuser_group -radix hex
+## set tb_m_axis_tkeep_group [add_wave_group m_axis_tkeep(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tkeep_V -into $tb_m_axis_tkeep_group -radix hex
+## set tb_m_axis_tdata_group [add_wave_group m_axis_tdata(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tdata_V -into $tb_m_axis_tdata_group -radix hex
+## set tb_s_axis_tready_group [add_wave_group s_axis_tready(wire) -into $tbcoutputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tready_V -into $tb_s_axis_tready_group -radix hex
+## set tbcinputgroup [add_wave_group "C Inputs" -into $testbenchgroup]
+## set tb_reset_group [add_wave_group reset(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/reset_V -into $tb_reset_group -radix hex
+## set tb_m_axis_tready_group [add_wave_group m_axis_tready(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/m_axis_tready_V -into $tb_m_axis_tready_group -radix hex
+## set tb_s_axis_tlast_group [add_wave_group s_axis_tlast(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tlast_V -into $tb_s_axis_tlast_group -radix hex
+## set tb_s_axis_tvalid_group [add_wave_group s_axis_tvalid(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tvalid_V -into $tb_s_axis_tvalid_group -radix hex
+## set tb_s_axis_tuser_group [add_wave_group s_axis_tuser(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tuser_V -into $tb_s_axis_tuser_group -radix hex
+## set tb_s_axis_tkeep_group [add_wave_group s_axis_tkeep(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tkeep_V -into $tb_s_axis_tkeep_group -radix hex
+## set tb_s_axis_tdata_group [add_wave_group s_axis_tdata(wire) -into $tbcinputgroup]
+## add_wave /apatb_switch_output_port_lookup_top/s_axis_tdata_V -into $tb_s_axis_tdata_group -radix hex
+## save_wave_config switch_output_port_lookup.wcfg
+## run all
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 17 [0.00%] @ "125000"
+// RTL Simulation : 1 / 17 [100.00%] @ "205000"
+// RTL Simulation : 2 / 17 [100.00%] @ "275000"
+// RTL Simulation : 3 / 17 [100.00%] @ "345000"
+// RTL Simulation : 4 / 17 [100.00%] @ "415000"
+// RTL Simulation : 5 / 17 [100.00%] @ "485000"
+// RTL Simulation : 6 / 17 [100.00%] @ "555000"
+// RTL Simulation : 7 / 17 [100.00%] @ "625000"
+// RTL Simulation : 8 / 17 [100.00%] @ "695000"
+// RTL Simulation : 9 / 17 [100.00%] @ "765000"
+// RTL Simulation : 10 / 17 [100.00%] @ "835000"
+// RTL Simulation : 11 / 17 [100.00%] @ "905000"
+// RTL Simulation : 12 / 17 [100.00%] @ "975000"
+// RTL Simulation : 13 / 17 [100.00%] @ "1045000"
+// RTL Simulation : 14 / 17 [100.00%] @ "1115000"
+// RTL Simulation : 15 / 17 [100.00%] @ "1185000"
+// RTL Simulation : 16 / 17 [100.00%] @ "1255000"
+// RTL Simulation : 17 / 17 [100.00%] @ "1325000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 1365 ns : File "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/switch_output_port_lookup.autotb.v" Line 901
+## quit
+INFO: [Common 17-206] Exiting xsim at Fri Dec 24 16:01:13 2021...

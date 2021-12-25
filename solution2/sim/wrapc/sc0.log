@@ -1,0 +1,11 @@
+   Build using "/opt/Xilinx/Vivado/2018.2/tps/lnx64/gcc-6.2.0/bin/g++"
+   Compiling Send_packet.cpp_pre.cpp.tb.cpp
+   Compiling lut.cpp_pre.cpp.tb.cpp
+   Compiling packet.cpp_pre.cpp.tb.cpp
+   Compiling Output_port_lookup.cpp_pre.cpp.tb.cpp
+   Compiling Combine.cpp_pre.cpp.tb.cpp
+   Compiling test.cpp_pre.cpp.tb.cpp
+   Compiling Eth.cpp_pre.cpp.tb.cpp
+   Compiling Fifo.cpp_pre.cpp.tb.cpp
+   Compiling apatb_switch_output_port_lookup.cpp
+   Generating cosim.tv.exe

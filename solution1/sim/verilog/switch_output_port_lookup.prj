@@ -1,0 +1,9 @@
+sv work "glbl.v"
+sv xil_defaultlib "switch_output_porbkb.v"
+sv xil_defaultlib "eth.v"
+sv xil_defaultlib "switch_output_port_lookup.autotb.v"
+sv xil_defaultlib "switch_output_port_lookup.v"
+sv xil_defaultlib "Read_r.v"
+sv xil_defaultlib "lut.v"
+sv xil_defaultlib "switch_output_porcud.v"
+

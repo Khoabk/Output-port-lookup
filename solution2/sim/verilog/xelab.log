@@ -1,0 +1,39 @@
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_switch_output_port_lookup_top glbl -prj switch_output_port_lookup.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2018.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s switch_output_port_lookup -debug wave 
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/switch_output_porbkb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module switch_output_porbkb_ram
+INFO: [VRFC 10-311] analyzing module switch_output_porbkb
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/eth.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module eth
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/switch_output_port_lookup.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_switch_output_port_lookup_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/switch_output_port_lookup.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module switch_output_port_lookup
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/Read_r.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Read_r
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/lut.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/switch_output_porcud.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module switch_output_porcud_ram
+INFO: [VRFC 10-311] analyzing module switch_output_porcud
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.switch_output_porbkb_ram
+Compiling module xil_defaultlib.switch_output_porbkb(DataWidth=4...
+Compiling module xil_defaultlib.switch_output_porcud_ram
+Compiling module xil_defaultlib.switch_output_porcud(DataWidth=8...
+Compiling module xil_defaultlib.lut
+Compiling module xil_defaultlib.Read_r
+Compiling module xil_defaultlib.eth
+Compiling module xil_defaultlib.switch_output_port_lookup
+Compiling module xil_defaultlib.apatb_switch_output_port_lookup_...
+Compiling module work.glbl
+Built simulation snapshot switch_output_port_lookup

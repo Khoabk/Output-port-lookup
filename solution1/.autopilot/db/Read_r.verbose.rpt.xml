@@ -1,0 +1,181 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Read_r'" level="0">
+<item name = "Date">Wed Dec 15 11:44:37 2021
+</item>
+<item name = "Version">2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)</item>
+<item name = "Project">Output_port_lookup</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">virtex7</item>
+<item name = "Target device">xc7vx690tffg1157-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 4.034, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2, 2, 2, 2, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 320</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 126</column>
+<column name="Register">-, -, 430, -</column>
+<specialColumn name="Available">2940, 3600, 866400, 433200</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Queue_rd_pos_V_assi_1_fu_384_p2">+, 0, 0, 13, 4, 1</column>
+<column name="Queue_rd_pos_V_assi_fu_361_p2">+, 0, 0, 13, 4, 1</column>
+<column name="Queue_size_assign_i_2_fu_372_p2">+, 0, 0, 39, 32, 2</column>
+<column name="Queue_size_assign_i_fu_349_p2">+, 0, 0, 39, 32, 2</column>
+<column name="brmerge_demorgan_i_fu_214_p2">and, 0, 0, 2, 1, 1</column>
+<column name="dst_port_rd_V_fu_312_p2">and, 0, 0, 2, 1, 1</column>
+<column name="internal_m_valid_V_fu_338_p2">and, 0, 0, 2, 1, 1</column>
+<column name="r_V_fu_344_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp3_i_fu_231_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp4_i_fu_260_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp7_i_fu_272_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp1_fu_255_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp2_fu_249_p2">and, 0, 0, 2, 1, 1</column>
+<column name="tmp_fu_243_p2">and, 0, 0, 2, 1, 1</column>
+<column name="sel_tmp2_i_fu_225_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="sel_tmp_i_fu_219_p2">icmp, 0, 0, 8, 2, 1</column>
+<column name="this_assign_s_fu_180_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="val_assign_fu_174_p2">icmp, 0, 0, 18, 32, 1</column>
+<column name="not_sel_tmp7_i_fu_292_p2">or, 0, 0, 2, 1, 1</column>
+<column name="p_state_1_flag_1_i_fu_318_p2">or, 0, 0, 2, 1, 1</column>
+<column name="p_state_1_new_1_i_fu_323_p2">or, 0, 0, 2, 1, 1</column>
+<column name="send_packet_V_fu_298_p2">or, 0, 0, 2, 1, 1</column>
+<column name="state_1_flag_1_i_fu_278_p3">select, 0, 0, 2, 1, 1</column>
+<column name="sth_V_fu_304_p3">select, 0, 0, 128, 1, 128</column>
+<column name="not_sel_tmp3_i_fu_237_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="sel_tmp2_i_not_fu_286_p2">xor, 0, 0, 2, 1, 2</column>
+<column name="sel_tmp6_i_fu_266_p2">xor, 0, 0, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Queue_ap_axis_size_o">15, 3, 32, 96</column>
+<column name="Queue_rd_pos_V_1_o">15, 3, 4, 12</column>
+<column name="Queue_rd_pos_V_o">15, 3, 4, 12</column>
+<column name="Queue_size_o">15, 3, 32, 96</column>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
+<column name="ap_return_0">9, 2, 256, 512</column>
+<column name="ap_return_1">9, 2, 32, 64</column>
+<column name="ap_return_2">9, 2, 128, 256</column>
+<column name="ap_return_3">9, 2, 1, 2</column>
+<column name="ap_return_4">9, 2, 1, 2</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Queue_rd_pos_V_1_lo_reg_452">4, 0, 4, 0</column>
+<column name="Queue_rd_pos_V_load_reg_462">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
+<column name="ap_return_0_preg">256, 0, 256, 0</column>
+<column name="ap_return_1_preg">32, 0, 32, 0</column>
+<column name="ap_return_2_preg">128, 0, 128, 0</column>
+<column name="ap_return_3_preg">1, 0, 1, 0</column>
+<column name="ap_return_4_preg">1, 0, 1, 0</column>
+<column name="state_1">1, 0, 32, 31</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_return_0">out, 256, ap_ctrl_hs, Read, return value</column>
+<column name="ap_return_1">out, 32, ap_ctrl_hs, Read, return value</column>
+<column name="ap_return_2">out, 128, ap_ctrl_hs, Read, return value</column>
+<column name="ap_return_3">out, 1, ap_ctrl_hs, Read, return value</column>
+<column name="ap_return_4">out, 1, ap_ctrl_hs, Read, return value</column>
+<column name="m_axis_tready_V">in, 1, ap_none, m_axis_tready_V, scalar</column>
+<column name="reset_V">in, 1, ap_none, reset_V, scalar</column>
+<column name="Queue_ap_axis_size_i">in, 32, ap_ovld, Queue_ap_axis_size, pointer</column>
+<column name="Queue_ap_axis_size_o">out, 32, ap_ovld, Queue_ap_axis_size, pointer</column>
+<column name="Queue_ap_axis_size_o_ap_vld">out, 1, ap_ovld, Queue_ap_axis_size, pointer</column>
+<column name="Queue_wr_pos_V_1">out, 4, ap_vld, Queue_wr_pos_V_1, pointer</column>
+<column name="Queue_wr_pos_V_1_ap_vld">out, 1, ap_vld, Queue_wr_pos_V_1, pointer</column>
+<column name="Queue_rd_pos_V_1_i">in, 4, ap_ovld, Queue_rd_pos_V_1, pointer</column>
+<column name="Queue_rd_pos_V_1_o">out, 4, ap_ovld, Queue_rd_pos_V_1, pointer</column>
+<column name="Queue_rd_pos_V_1_o_ap_vld">out, 1, ap_ovld, Queue_rd_pos_V_1, pointer</column>
+<column name="Queue_size_i">in, 32, ap_ovld, Queue_size, pointer</column>
+<column name="Queue_size_o">out, 32, ap_ovld, Queue_size, pointer</column>
+<column name="Queue_size_o_ap_vld">out, 1, ap_ovld, Queue_size, pointer</column>
+<column name="Queue_wr_pos_V">out, 4, ap_vld, Queue_wr_pos_V, pointer</column>
+<column name="Queue_wr_pos_V_ap_vld">out, 1, ap_vld, Queue_wr_pos_V, pointer</column>
+<column name="Queue_rd_pos_V_i">in, 4, ap_ovld, Queue_rd_pos_V, pointer</column>
+<column name="Queue_rd_pos_V_o">out, 4, ap_ovld, Queue_rd_pos_V, pointer</column>
+<column name="Queue_rd_pos_V_o_ap_vld">out, 1, ap_ovld, Queue_rd_pos_V, pointer</column>
+<column name="Queue_buffer_packet_address0">out, 4, ap_memory, Queue_buffer_packet, array</column>
+<column name="Queue_buffer_packet_ce0">out, 1, ap_memory, Queue_buffer_packet, array</column>
+<column name="Queue_buffer_packet_q0">in, 417, ap_memory, Queue_buffer_packet, array</column>
+<column name="Queue_buffer_V_address0">out, 4, ap_memory, Queue_buffer_V, array</column>
+<column name="Queue_buffer_V_ce0">out, 1, ap_memory, Queue_buffer_V, array</column>
+<column name="Queue_buffer_V_q0">in, 8, ap_memory, Queue_buffer_V, array</column>
+</table>
+</item>
+</section>
+</profile>

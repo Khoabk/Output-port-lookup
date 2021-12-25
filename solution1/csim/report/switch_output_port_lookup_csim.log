@@ -1,0 +1,19 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../test.cpp in debug mode
+   Compiling ../../../Output_port_lookup.cpp in debug mode
+   Generating csim.exe
+Tlast1: 0
+Tlast1: 0
+Tlast1: 0
+Warning! Higher bound (256) or lower bound (0) out of range (256).
+Tlast1: 0
+Tlast1: 0
+Tlast1: 0
+Tlast1: 1
+Tlast2: 0
+Tlast2: 0
+Tlast2: 0
+Tlast2: 1
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

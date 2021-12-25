@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 15 11:15:53 2021
+# Process ID: 5192
+# Current directory: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog
+# Command line: wbtcv -mode batch -source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/xsim.dir/switch_output_port_lookup/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/webtalk.log
+# Journal file: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/webtalk.jou
+#-----------------------------------------------------------
+source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/xsim.dir/switch_output_port_lookup/webtalk/xsim_webtalk.tcl -notrace

@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"switch_output_port_lookup": {
+			"proto_instances": {
+			}
+		}
+	}
+}

@@ -1,0 +1,236 @@
+
+
+================================================================
+== Vivado HLS Report for 'switch_output_port_lookup'
+================================================================
+* Date:           Sat Dec 25 12:03:25 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        Output_port_lookup
+* Solution:       solution2
+* Product family: virtex7
+* Target device:  xc7vx690tffg1761-3
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.004|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    6|    6|    6|    6|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.97>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i256 %s_axis_tdata_V), !map !166"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %s_axis_tkeep_V), !map !172"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128 %s_axis_tuser_V), !map !176"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %s_axis_tvalid_V), !map !180"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %s_axis_tready_V), !map !184"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %s_axis_tlast_V), !map !190"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i256* %m_axis_tdata_V), !map !194"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %m_axis_tkeep_V), !map !198"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i128* %m_axis_tuser_V), !map !202"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %m_axis_tvalid_V), !map !206"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %m_axis_tready_V), !map !210"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1* %m_axis_tlast_V), !map !214"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1 %reset_V), !map !218"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([26 x i8]* @switch_output_port_l) nounwind"   --->   Operation 19 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%reset_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %reset_V)"   --->   Operation 20 'read' 'reset_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%m_axis_tready_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %m_axis_tready_V)"   --->   Operation 21 'read' 'm_axis_tready_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%s_axis_tlast_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %s_axis_tlast_V)"   --->   Operation 22 'read' 's_axis_tlast_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%s_axis_tvalid_V_read = call i1 @_ssdm_op_Read.ap_none.i1(i1 %s_axis_tvalid_V)"   --->   Operation 23 'read' 's_axis_tvalid_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%s_axis_tuser_V_read = call i128 @_ssdm_op_Read.ap_none.i128(i128 %s_axis_tuser_V)"   --->   Operation 24 'read' 's_axis_tuser_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%s_axis_tkeep_V_read = call i32 @_ssdm_op_Read.ap_none.i32(i32 %s_axis_tkeep_V)"   --->   Operation 25 'read' 's_axis_tkeep_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%s_axis_tdata_V_read = call i256 @_ssdm_op_Read.ap_none.i256(i256 %s_axis_tdata_V)"   --->   Operation 26 'read' 's_axis_tdata_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i256 %s_axis_tdata_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:210]   --->   Operation 27 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %s_axis_tkeep_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:211]   --->   Operation 28 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128 %s_axis_tuser_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:212]   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %s_axis_tvalid_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:213]   --->   Operation 30 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %s_axis_tready_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:214]   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %s_axis_tlast_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:215]   --->   Operation 32 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i256* %m_axis_tdata_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:217]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %m_axis_tkeep_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:218]   --->   Operation 34 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i128* %m_axis_tuser_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:219]   --->   Operation 35 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %m_axis_tvalid_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:220]   --->   Operation 36 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %m_axis_tready_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:221]   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %m_axis_tlast_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:222]   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1 %reset_V, [8 x i8]* @p_str15, i32 0, i32 0, [1 x i8]* @p_str116, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116, [1 x i8]* @p_str116, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str116, [1 x i8]* @p_str116) nounwind" [Output_port_lookup/Output_port_lookup.cpp:224]   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.46ns)   --->   "%this_assign_2 = xor i1 %reset_V_read, true" [Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 40 'xor' 'this_assign_2' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "br i1 %reset_V_read, label %._crit_edge.i, label %1" [Output_port_lookup/Output_port_lookup.cpp:75->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 41 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.97ns)   --->   "store i32 0, i32* @Queue_ap_axis_size, align 4" [Output_port_lookup/Fifo.cpp:61->Output_port_lookup/Output_port_lookup.cpp:77->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 42 'store' <Predicate = (!reset_V_read)> <Delay = 0.97>
+ST_1 : Operation 43 [1/1] (0.97ns)   --->   "store i4 0, i4* @Queue_wr_pos_V_1, align 1" [Output_port_lookup/Fifo.cpp:62->Output_port_lookup/Output_port_lookup.cpp:77->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 43 'store' <Predicate = (!reset_V_read)> <Delay = 0.97>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "store i4 0, i4* @Queue_rd_pos_V_1, align 1" [Output_port_lookup/Fifo.cpp:63->Output_port_lookup/Output_port_lookup.cpp:77->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 44 'store' <Predicate = (!reset_V_read)> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (0.97ns)   --->   "store i32 0, i32* @Queue_size, align 4" [Output_port_lookup/Fifo.cpp:61->Output_port_lookup/Output_port_lookup.cpp:79->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 45 'store' <Predicate = (!reset_V_read)> <Delay = 0.97>
+ST_1 : Operation 46 [1/1] (0.97ns)   --->   "store i4 0, i4* @Queue_wr_pos_V, align 1" [Output_port_lookup/Fifo.cpp:62->Output_port_lookup/Output_port_lookup.cpp:79->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 46 'store' <Predicate = (!reset_V_read)> <Delay = 0.97>
+ST_1 : Operation 47 [1/1] (0.00ns)   --->   "store i4 0, i4* @Queue_rd_pos_V, align 1" [Output_port_lookup/Fifo.cpp:63->Output_port_lookup/Output_port_lookup.cpp:79->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 47 'store' <Predicate = (!reset_V_read)> <Delay = 0.00>
+ST_1 : Operation 48 [1/1] (0.00ns)   --->   "br label %._crit_edge.i" [Output_port_lookup/Output_port_lookup.cpp:80->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 48 'br' <Predicate = (!reset_V_read)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 8.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%Queue_size_load_1 = load i32* @Queue_ap_axis_size, align 4" [Output_port_lookup/Fifo.cpp:27->Output_port_lookup/Output_port_lookup.cpp:82->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 49 'load' 'Queue_size_load_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%tmp = call i29 @_ssdm_op_PartSelect.i29.i32.i32.i32(i32 %Queue_size_load_1, i32 3, i32 31)" [Output_port_lookup/Output_port_lookup.cpp:82->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 50 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [1/1] (1.29ns)   --->   "%rhs_V = icmp slt i29 %tmp, 1" [Output_port_lookup/Output_port_lookup.cpp:82->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 51 'icmp' 'rhs_V' <Predicate = true> <Delay = 1.29> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.29> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.46ns)   --->   "%r_V = and i1 %rhs_V, %s_axis_tvalid_V_read" [Output_port_lookup/Output_port_lookup.cpp:93->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 52 'and' 'r_V' <Predicate = true> <Delay = 0.46> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.46> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "br i1 %r_V, label %2, label %._crit_edge81.i" [Output_port_lookup/Output_port_lookup.cpp:96->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%p_Result_s = call i417 @_ssdm_op_BitConcatenate.i417.i1.i128.i32.i256(i1 %s_axis_tlast_V_read, i128 %s_axis_tuser_V_read, i32 %s_axis_tkeep_V_read, i256 %s_axis_tdata_V_read)" [Output_port_lookup/packet.cpp:14->Output_port_lookup/Output_port_lookup.cpp:99->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 54 'bitconcatenate' 'p_Result_s' <Predicate = (r_V)> <Delay = 0.00>
+ST_2 : Operation 55 [1/1] (1.57ns)   --->   "%Queue_size_assign_i = add nsw i32 %Queue_size_load_1, 1" [Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 55 'add' 'Queue_size_assign_i' <Predicate = (r_V)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [1/1] (0.97ns)   --->   "store i32 %Queue_size_assign_i, i32* @Queue_ap_axis_size, align 4" [Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 56 'store' <Predicate = (r_V)> <Delay = 0.97>
+ST_2 : Operation 57 [1/1] (0.00ns)   --->   "%t_V = load i4* @Queue_wr_pos_V_1, align 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 57 'load' 't_V' <Predicate = (r_V)> <Delay = 0.00>
+ST_2 : Operation 58 [1/1] (1.09ns)   --->   "%Queue_wr_pos_V_assi = add i4 %t_V, 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 58 'add' 'Queue_wr_pos_V_assi' <Predicate = (r_V)> <Delay = 1.09> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [1/1] (0.97ns)   --->   "store i4 %Queue_wr_pos_V_assi, i4* @Queue_wr_pos_V_1, align 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 59 'store' <Predicate = (r_V)> <Delay = 0.97>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%tmp_i_i = zext i4 %t_V to i64" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 60 'zext' 'tmp_i_i' <Predicate = (r_V)> <Delay = 0.00>
+ST_2 : Operation 61 [1/1] (0.00ns)   --->   "%Queue_buffer_packet_1 = getelementptr [16 x i417]* @Queue_buffer_packet, i64 0, i64 %tmp_i_i" [Output_port_lookup/packet.h:21->Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 61 'getelementptr' 'Queue_buffer_packet_1' <Predicate = (r_V)> <Delay = 0.00>
+ST_2 : Operation 62 [1/1] (1.99ns)   --->   "store i417 %p_Result_s, i417* %Queue_buffer_packet_1, align 8" [Output_port_lookup/packet.h:21->Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:101->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 62 'store' <Predicate = (r_V)> <Delay = 1.99> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "br label %._crit_edge81.i" [Output_port_lookup/Output_port_lookup.cpp:103->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 63 'br' <Predicate = (r_V)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (1.51ns)   --->   "%eth_ret_i_i = call fastcc { i48, i48, i8, i1 } @eth(i256 %s_axis_tdata_V_read, i128 %s_axis_tuser_V_read, i1 %r_V, i1 %s_axis_tlast_V_read, i1 %this_assign_2)" [Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 64 'call' 'eth_ret_i_i' <Predicate = true> <Delay = 1.51> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 65 [1/1] (0.00ns)   --->   "%dst_mac_V = extractvalue { i48, i48, i8, i1 } %eth_ret_i_i, 0" [Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 65 'extractvalue' 'dst_mac_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%src_mac_V = extractvalue { i48, i48, i8, i1 } %eth_ret_i_i, 1" [Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 66 'extractvalue' 'src_mac_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 67 [1/1] (0.00ns)   --->   "%src_port_V = extractvalue { i48, i48, i8, i1 } %eth_ret_i_i, 2" [Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 67 'extractvalue' 'src_port_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%eth_done_V = extractvalue { i48, i48, i8, i1 } %eth_ret_i_i, 3" [Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 68 'extractvalue' 'eth_done_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (4.73ns)   --->   "%lut_ret_i_i = call fastcc { i8, i1 } @lut(i48 %dst_mac_V, i48 %src_mac_V, i8 %src_port_V, i1 %eth_done_V, i1 %this_assign_2)" [Output_port_lookup/Combine.cpp:62->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 69 'call' 'lut_ret_i_i' <Predicate = true> <Delay = 4.73> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%dst_port_V = extractvalue { i8, i1 } %lut_ret_i_i, 0" [Output_port_lookup/Combine.cpp:62->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 70 'extractvalue' 'dst_port_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (0.00ns)   --->   "%lookup_done_V = extractvalue { i8, i1 } %lut_ret_i_i, 1" [Output_port_lookup/Combine.cpp:62->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 71 'extractvalue' 'lookup_done_V' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "br i1 %lookup_done_V, label %3, label %Write.exit" [Output_port_lookup/Output_port_lookup.cpp:109->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 72 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.55>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%Queue_size_load = load i32* @Queue_size, align 4" [Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 73 'load' 'Queue_size_load' <Predicate = (lookup_done_V)> <Delay = 0.00>
+ST_3 : Operation 74 [1/1] (1.57ns)   --->   "%Queue_size_assign_i_1 = add nsw i32 %Queue_size_load, 1" [Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 74 'add' 'Queue_size_assign_i_1' <Predicate = (lookup_done_V)> <Delay = 1.57> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [1/1] (0.97ns)   --->   "store i32 %Queue_size_assign_i_1, i32* @Queue_size, align 4" [Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 75 'store' <Predicate = (lookup_done_V)> <Delay = 0.97>
+ST_3 : Operation 76 [1/1] (0.00ns)   --->   "%t_V_1 = load i4* @Queue_wr_pos_V, align 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 76 'load' 't_V_1' <Predicate = (lookup_done_V)> <Delay = 0.00>
+ST_3 : Operation 77 [1/1] (1.09ns)   --->   "%Queue_wr_pos_V_assi_1 = add i4 %t_V_1, 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 77 'add' 'Queue_wr_pos_V_assi_1' <Predicate = (lookup_done_V)> <Delay = 1.09> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.09> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [1/1] (0.97ns)   --->   "store i4 %Queue_wr_pos_V_assi_1, i4* @Queue_wr_pos_V, align 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 78 'store' <Predicate = (lookup_done_V)> <Delay = 0.97>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%tmp_i3_i = zext i4 %t_V_1 to i64" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 79 'zext' 'tmp_i3_i' <Predicate = (lookup_done_V)> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%Queue_buffer_V_addr = getelementptr [16 x i8]* @Queue_buffer_V, i64 0, i64 %tmp_i3_i" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 80 'getelementptr' 'Queue_buffer_V_addr' <Predicate = (lookup_done_V)> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (1.09ns)   --->   "store i8 %dst_port_V, i8* %Queue_buffer_V_addr, align 1" [Output_port_lookup/Fifo.cpp:35->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 81 'store' <Predicate = (lookup_done_V)> <Delay = 1.09> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 1.09> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 16> <RAM>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "br label %Write.exit" [Output_port_lookup/Output_port_lookup.cpp:112->Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 82 'br' <Predicate = (lookup_done_V)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i1P(i1* %s_axis_tready_V, i1 %rhs_V)" [Output_port_lookup/Output_port_lookup.cpp:232]   --->   Operation 83 'write' <Predicate = true> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 84 [2/2] (0.00ns)   --->   "%Read_ret = call fastcc { i256, i32, i128, i1, i1 } @Read(i1 %m_axis_tready_V_read, i1 %this_assign_2)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 84 'call' 'Read_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.70>
+ST_5 : Operation 85 [1/2] (2.70ns)   --->   "%Read_ret = call fastcc { i256, i32, i128, i1, i1 } @Read(i1 %m_axis_tready_V_read, i1 %this_assign_2)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 85 'call' 'Read_ret' <Predicate = true> <Delay = 2.70> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 86 [1/1] (0.00ns)   --->   "%m_axis_tdata_V_ret = extractvalue { i256, i32, i128, i1, i1 } %Read_ret, 0" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 86 'extractvalue' 'm_axis_tdata_V_ret' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 87 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i256P(i256* %m_axis_tdata_V, i256 %m_axis_tdata_V_ret)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 87 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 88 [1/1] (0.00ns)   --->   "%m_axis_tkeep_V_ret = extractvalue { i256, i32, i128, i1, i1 } %Read_ret, 1" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 88 'extractvalue' 'm_axis_tkeep_V_ret' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 89 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i32P(i32* %m_axis_tkeep_V, i32 %m_axis_tkeep_V_ret)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 89 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 90 [1/1] (0.00ns)   --->   "%m_axis_tuser_V_ret = extractvalue { i256, i32, i128, i1, i1 } %Read_ret, 2" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 90 'extractvalue' 'm_axis_tuser_V_ret' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 91 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i128P(i128* %m_axis_tuser_V, i128 %m_axis_tuser_V_ret)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 91 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 92 [1/1] (0.00ns)   --->   "%m_axis_tvalid_V_ret = extractvalue { i256, i32, i128, i1, i1 } %Read_ret, 3" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 92 'extractvalue' 'm_axis_tvalid_V_ret' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 93 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i1P(i1* %m_axis_tvalid_V, i1 %m_axis_tvalid_V_ret)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 93 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 94 [1/1] (0.00ns)   --->   "%m_axis_tlast_V_ret = extractvalue { i256, i32, i128, i1, i1 } %Read_ret, 4" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 94 'extractvalue' 'm_axis_tlast_V_ret' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 95 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_none.i1P(i1* %m_axis_tlast_V, i1 %m_axis_tlast_V_ret)" [Output_port_lookup/Output_port_lookup.cpp:234]   --->   Operation 95 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 96 [1/1] (0.00ns)   --->   "ret void" [Output_port_lookup/Output_port_lookup.cpp:238]   --->   Operation 96 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 0.978ns
+The critical path consists of the following:
+	'store' operation (Output_port_lookup/Fifo.cpp:61->Output_port_lookup/Output_port_lookup.cpp:77->Output_port_lookup/Output_port_lookup.cpp:232) of constant 0 on static variable 'Queue_ap_axis_size' [94]  (0.978 ns)
+
+ <State 2>: 8ns
+The critical path consists of the following:
+	'load' operation ('Queue_size_load_1', Output_port_lookup/Fifo.cpp:27->Output_port_lookup/Output_port_lookup.cpp:82->Output_port_lookup/Output_port_lookup.cpp:232) on static variable 'Queue_ap_axis_size' [102]  (0 ns)
+	'icmp' operation ('val', Output_port_lookup/Output_port_lookup.cpp:82->Output_port_lookup/Output_port_lookup.cpp:232) [104]  (1.3 ns)
+	'and' operation ('r.V', Output_port_lookup/Output_port_lookup.cpp:93->Output_port_lookup/Output_port_lookup.cpp:232) [105]  (0.464 ns)
+	'call' operation ('eth_ret_i_i', Output_port_lookup/Combine.cpp:60->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232) to 'eth' [119]  (1.51 ns)
+	'call' operation ('lut_ret_i_i', Output_port_lookup/Combine.cpp:62->Output_port_lookup/Output_port_lookup.cpp:106->Output_port_lookup/Output_port_lookup.cpp:232) to 'lut' [124]  (4.73 ns)
+
+ <State 3>: 2.56ns
+The critical path consists of the following:
+	'load' operation ('Queue_size_load', Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232) on static variable 'Queue_size' [129]  (0 ns)
+	'add' operation ('Queue_size_assign_i_1', Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232) [130]  (1.58 ns)
+	'store' operation (Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232) of variable 'Queue_size_assign_i_1', Output_port_lookup/Fifo.cpp:34->Output_port_lookup/Output_port_lookup.cpp:111->Output_port_lookup/Output_port_lookup.cpp:232 on static variable 'Queue_size' [131]  (0.978 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 2.7ns
+The critical path consists of the following:
+	'call' operation ('Read_ret', Output_port_lookup/Output_port_lookup.cpp:234) to 'Read' [141]  (2.7 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

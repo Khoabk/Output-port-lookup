@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Dec 24 16:01:00 2021
+# Process ID: 19339
+# Current directory: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog
+# Command line: xsim -mode tcl -source {xsim.dir/switch_output_port_lookup/xsim_script.tcl}
+# Log file: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/xsim.log
+# Journal file: /home/khoa/Documents/logic_design/Output_port_lookup/solution2/sim/verilog/xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/switch_output_port_lookup/xsim_script.tcl
+source switch_output_port_lookup.tcl

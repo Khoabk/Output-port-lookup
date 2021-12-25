@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Wed Dec 15 11:23:17 2021
+# Process ID: 5347
+# Current directory: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog
+# Command line: vivado -source open_wave.tcl
+# Log file: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/vivado.log
+# Journal file: /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/vivado.jou
+#-----------------------------------------------------------
+start_gui
+source open_wave.tcl
+# current_fileset
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2018.2/data/ip'.
+current_fileset: Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 5970.332 ; gain = 111.379 ; free physical = 116 ; free virtual = 3690
+# open_wave_database switch_output_port_lookup.wdb
+open_wave_config /home/khoa/Documents/logic_design/Output_port_lookup/solution1/sim/verilog/switch_output_port_lookup.wcfg
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 15 11:56:16 2021...

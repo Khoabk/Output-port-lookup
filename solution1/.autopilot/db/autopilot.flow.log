@@ -1,0 +1,962 @@
+INFO-FLOW: Workspace /home/khoa/Documents/logic_design/Output_port_lookup/solution1 opened at Wed Dec 15 11:42:32 +07 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 91050 } {LUT 364200 } {FF 728400 } {DSP48E 1260} {BRAM 1590}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.11 sec.
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.33 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.43 sec.
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.45 sec.
+Command     ap_source done; 0.45 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7_fpv6 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7_hp.hlp 
+Execute     source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7vx690tffg1157-1 
+Execute       add_library xilinx/virtex7/virtex7:xc7vx690t:ffg1157:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7vx690t 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 108300} {LUT 433200 } {FF 866400 } {DSP48E 3600} {BRAM 2940}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/virtex7/virtex7_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7vx690tffg1157-1'
+Execute       get_default_platform 
+Command     set_part done; 0.33 sec.
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 108300} {LUT 433200 } {FF 866400 } {DSP48E 3600} {BRAM 2940}  
+Execute     config_chip_info -quiet -speed slow 
+Command   open_solution done; 0.97 sec.
+Execute   set_part xc7vx690tffg1157-1 -tool vivado 
+Execute     add_library xilinx/virtex7/virtex7:xc7vx690t:ffg1157:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7vx690t 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 108300} {LUT 433200 } {FF 866400 } {DSP48E 3600} {BRAM 2940}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/virtex7/virtex7_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Command   set_part done; 0.21 sec.
+Execute   create_clock -period 10 -name default 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/packet.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/packet.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/packet.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/packet.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/packet.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp
+Command       clang done; 2.21 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.12 sec.
+INFO-FLOW: GCC PP time: 4 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.54 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.18 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.packet.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.packet.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.packet.pp.0.cpp.err.log 
+Command       ap_eval done; 0.98 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.62 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.47 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.2.cpp
+Command       clang done; 1.25 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.bc
+Command       clang done; 2.03 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/lut.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/lut.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/lut.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/lut.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/lut.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp
+Command       clang done; 1.42 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.24 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.39 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.2 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.lut.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.lut.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.lut.pp.0.cpp.err.log 
+Command       ap_eval done; 0.86 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.53 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.47 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.2.cpp
+Command       clang done; 1.26 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.bc
+Command       clang done; 1.97 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/Send_packet.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/Send_packet.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/Send_packet.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/Send_packet.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/Send_packet.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp
+Command       clang done; 1.32 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.32 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.4 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.26 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Send_packet.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Send_packet.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Send_packet.pp.0.cpp.err.log 
+Command       ap_eval done; 0.88 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.49 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.46 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.2.cpp
+Command       clang done; 1.26 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.bc
+Command       clang done; 1.98 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/Output_port_lookup.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/Output_port_lookup.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/Output_port_lookup.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/Output_port_lookup.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/Output_port_lookup.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp
+Command       clang done; 1.32 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.33 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.41 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.22 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Output_port_lookup.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Output_port_lookup.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Output_port_lookup.pp.0.cpp.err.log 
+Command       ap_eval done; 0.88 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.55 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.54 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.2.cpp
+Command       clang done; 1.26 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.bc
+Command       clang done; 2.01 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/Fifo.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/Fifo.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/Fifo.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/Fifo.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/Fifo.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp
+Command       clang done; 1.44 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.24 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.4 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.21 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Fifo.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Fifo.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Fifo.pp.0.cpp.err.log 
+Command       ap_eval done; 0.87 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.51 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.48 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.2.cpp
+Command       clang done; 1.25 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.bc
+Command       clang done; 2.01 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/Eth.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/Eth.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/Eth.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/Eth.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/Eth.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp
+Command       clang done; 1.4 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.21 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.41 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.19 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Eth.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Eth.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Eth.pp.0.cpp.err.log 
+Command       ap_eval done; 0.87 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.52 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.47 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.2.cpp
+Command       clang done; 1.26 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.bc
+Command       clang done; 1.99 sec.
+INFO: [HLS 200-10] Analyzing design file 'Output_port_lookup/Combine.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling Output_port_lookup/Combine.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted Output_port_lookup/Combine.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "Output_port_lookup/Combine.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E Output_port_lookup/Combine.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp
+Command       clang done; 1.42 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp"  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.31 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.4 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp std=gnu++98 -directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/solution1.json -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.24 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Combine.pp.0.cpp.diag.yml /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Combine.pp.0.cpp.out.log 2> /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/xilinx-dataflow-lawyer.Combine.pp.0.cpp.err.log 
+Command       ap_eval done; 0.86 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.61 sec.
+INFO-FLOW: tidy-3.1 time 4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.14 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.2.cpp" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.2.cpp
+Command       clang done; 1.26 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.bc" 
+INFO-FLOW: exec /opt/Xilinx/Vivado/2018.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2018.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.bc
+Command       clang done; 2 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/packet.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Send_packet.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Output_port_lookup.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Fifo.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Eth.g.bc /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Combine.g.bc -hls-opt -except-internalize switch_output_port_lookup -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 1.66 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:01:36 ; elapsed = 00:01:50 . Memory (MB): peak = 352.133 ; gain = 0.074 ; free physical = 338 ; free virtual = 3640
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:01:36 ; elapsed = 00:01:50 . Memory (MB): peak = 352.133 ; gain = 0.074 ; free physical = 338 ; free virtual = 3640
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.pp.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.29 sec.
+Execute         llvm-ld /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2018.2/lnx64/lib -lfloatconversion -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.16 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top switch_output_port_lookup -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.0.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.59 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:01:37 ; elapsed = 00:01:52 . Memory (MB): peak = 481.488 ; gain = 129.430 ; free physical = 291 ; free virtual = 3599
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.1.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Reset' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:75) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Reset' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:77) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::isNearlyFull' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:80) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Enqueue' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'Combine' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:104) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Enqueue' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:109) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Reset' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:137) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Reset' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:139) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Front' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:142) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::isEmpty' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:148) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Front' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:156) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::isEmpty' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:156) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Dequeue' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Dequeue' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:166) automatically.
+Command         transform done; 0.64 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.21 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:01:38 ; elapsed = 00:01:53 . Memory (MB): peak = 481.488 ; gain = 129.430 ; free physical = 261 ; free virtual = 3571
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.g.1.bc to /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.1.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (Output_port_lookup/lut.cpp:68) in function 'lut' completely.
+INFO: [XFORM 203-101] Partitioning array 'lut.table.dst_port.V'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'lut.table.dest_mac.V'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Reset' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:75) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Reset' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:77) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::isNearlyFull' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:80) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Enqueue' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:99) automatically.
+INFO: [XFORM 203-602] Inlining function 'Combine' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:104) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Enqueue' into 'Write' (Output_port_lookup/Output_port_lookup.cpp:109) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Reset' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:137) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Reset' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:139) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Front' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:142) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::isEmpty' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:148) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Front' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:156) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::isEmpty' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:156) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_axis>::Dequeue' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:164) automatically.
+INFO: [XFORM 203-602] Inlining function 'Queue<ap_uint<8> >::Dequeue' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:166) automatically.
+Command         transform done; 1.48 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (Output_port_lookup/Send_packet.cpp:18:19) in function 'Send_packet'... converting 5 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'Send_packet' into 'Read' (Output_port_lookup/Output_port_lookup.cpp:156) automatically.
+INFO: [XFORM 203-602] Inlining function 'Write' into 'switch_output_port_lookup' (Output_port_lookup/Output_port_lookup.cpp:232) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'lut' (Output_port_lookup/lut.cpp:47:1)...14 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'Read' (Output_port_lookup/Output_port_lookup.cpp:22:1)...4 expression(s) balanced.
+Command         transform done; 0.81 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:01:40 ; elapsed = 00:01:56 . Memory (MB): peak = 545.449 ; gain = 193.391 ; free physical = 210 ; free virtual = 3524
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.2.bc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.44 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:01:41 ; elapsed = 00:01:57 . Memory (MB): peak = 545.449 ; gain = 193.391 ; free physical = 173 ; free virtual = 3488
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 6.65 sec.
+Command     elaborate done; 115.32 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'switch_output_port_lookup' ...
+Execute       ap_set_top_model switch_output_port_lookup 
+Execute       get_model_list switch_output_port_lookup -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model switch_output_port_lookup 
+Execute       preproc_iomode -model Read 
+Execute       preproc_iomode -model lut 
+Execute       preproc_iomode -model eth 
+Execute       get_model_list switch_output_port_lookup -filter all-wo-channel 
+INFO-FLOW: Model list for configure: eth lut Read switch_output_port_lookup
+INFO-FLOW: Configuring Module : eth ...
+Execute       set_default_model eth 
+Execute       apply_spec_resource_limit eth 
+INFO-FLOW: Configuring Module : lut ...
+Execute       set_default_model lut 
+Execute       apply_spec_resource_limit lut 
+INFO-FLOW: Configuring Module : Read ...
+Execute       set_default_model Read 
+Execute       apply_spec_resource_limit Read 
+INFO-FLOW: Configuring Module : switch_output_port_lookup ...
+Execute       set_default_model switch_output_port_lookup 
+Execute       apply_spec_resource_limit switch_output_port_lookup 
+INFO-FLOW: Model list for preprocess: eth lut Read switch_output_port_lookup
+INFO-FLOW: Preprocessing Module: eth ...
+Execute       set_default_model eth 
+Execute       cdfg_preprocess -model eth 
+Execute       rtl_gen_preprocess eth 
+INFO-FLOW: Preprocessing Module: lut ...
+Execute       set_default_model lut 
+Execute       cdfg_preprocess -model lut 
+Execute       rtl_gen_preprocess lut 
+INFO-FLOW: Preprocessing Module: Read ...
+Execute       set_default_model Read 
+Execute       cdfg_preprocess -model Read 
+Execute       rtl_gen_preprocess Read 
+WARNING: [SYN 201-103] Legalizing function name 'Read' to 'Read_r'.
+INFO-FLOW: Preprocessing Module: switch_output_port_lookup ...
+Execute       set_default_model switch_output_port_lookup 
+Execute       cdfg_preprocess -model switch_output_port_lookup 
+Execute       rtl_gen_preprocess switch_output_port_lookup 
+INFO-FLOW: Model list for synthesis: eth lut Read switch_output_port_lookup
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'eth' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model eth 
+Execute       schedule -model eth 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 117.16 seconds; current allocated memory: 199.870 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.sched.adb -f 
+INFO-FLOW: Finish scheduling eth.
+Execute       set_default_model eth 
+Execute       bind -model eth 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=eth
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 200.029 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.bind.adb -f 
+INFO-FLOW: Finish binding eth.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model lut 
+Execute       schedule -model lut 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.65 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.75 seconds; current allocated memory: 201.969 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.verbose.sched.rpt -verbose -f 
+Command       report done; 0.15 sec.
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.sched.adb -f 
+INFO-FLOW: Finish scheduling lut.
+Execute       set_default_model lut 
+Execute       bind -model lut 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=lut
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.33 seconds; current allocated memory: 203.246 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.verbose.bind.rpt -verbose -f 
+Command       report done; 0.36 sec.
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.bind.adb -f 
+INFO-FLOW: Finish binding lut.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model Read 
+Execute       schedule -model Read 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.51 seconds; current allocated memory: 203.668 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.sched.adb -f 
+INFO-FLOW: Finish scheduling Read.
+Execute       set_default_model Read 
+Execute       bind -model Read 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=Read
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 203.899 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.verbose.bind.rpt -verbose -f 
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.bind.adb -f 
+INFO-FLOW: Finish binding Read.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'switch_output_port_lookup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model switch_output_port_lookup 
+Execute       schedule -model switch_output_port_lookup 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 204.212 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.verbose.sched.rpt -verbose -f 
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.sched.adb -f 
+INFO-FLOW: Finish scheduling switch_output_port_lookup.
+Execute       set_default_model switch_output_port_lookup 
+Execute       bind -model switch_output_port_lookup 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=switch_output_port_lookup
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.51 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.55 seconds; current allocated memory: 204.704 MB.
+Execute       report -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.verbose.bind.rpt -verbose -f 
+Command       report done; 0.28 sec.
+Execute       db_write -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.bind.adb -f 
+INFO-FLOW: Finish binding switch_output_port_lookup.
+Execute       get_model_list switch_output_port_lookup -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess eth 
+Execute       rtl_gen_preprocess lut 
+Execute       rtl_gen_preprocess Read 
+Execute       rtl_gen_preprocess switch_output_port_lookup 
+INFO-FLOW: Model list for RTL generation: eth lut Read switch_output_port_lookup
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'eth' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model eth -vendor xilinx -mg_file /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'state' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'eth'.
+INFO: [HLS 200-111]  Elapsed time: 0.36 seconds; current allocated memory: 205.175 MB.
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       gen_rtl eth -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/systemc/eth -synmodules eth lut Read switch_output_port_lookup 
+Execute       gen_rtl eth -style xilinx -f -lang vhdl -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/vhdl/eth 
+Execute       gen_rtl eth -style xilinx -f -lang vlog -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/verilog/eth 
+Execute       gen_tb_info eth -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth -p /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db 
+Execute       report -model eth -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/eth_csynth.rpt -f 
+Execute       report -model eth -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/eth_csynth.xml -f -x 
+Execute       report -model eth -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.verbose.rpt -verbose -f 
+Command       report done; 0.29 sec.
+Execute       db_write -model eth -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.adb -f 
+Command       db_write done; 0.15 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'lut' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model lut -vendor xilinx -mg_file /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'lut_replace_pos_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dest_mac_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'lut_table_dst_port_V_15' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'lut'.
+Command       create_rtl_model done; 1.95 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.76 seconds; current allocated memory: 208.299 MB.
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       gen_rtl lut -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/systemc/lut -synmodules eth lut Read switch_output_port_lookup 
+Execute       gen_rtl lut -style xilinx -f -lang vhdl -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/vhdl/lut 
+Execute       gen_rtl lut -style xilinx -f -lang vlog -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/verilog/lut 
+Execute       gen_tb_info lut -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut -p /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.28 sec.
+Execute       report -model lut -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/lut_csynth.rpt -f 
+Command       report done; 0.29 sec.
+Execute       report -model lut -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/lut_csynth.xml -f -x 
+Command       report done; 0.34 sec.
+Execute       report -model lut -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.verbose.rpt -verbose -f 
+Command       report done; 0.97 sec.
+Execute       db_write -model lut -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.adb -f 
+Command       db_write done; 0.21 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Read_r' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model Read -vendor xilinx -mg_file /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'state_1' is power-on initialization.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Read_r'.
+INFO: [HLS 200-111]  Elapsed time: 2.37 seconds; current allocated memory: 213.348 MB.
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       gen_rtl Read -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/systemc/Read_r -synmodules eth lut Read switch_output_port_lookup 
+Execute       gen_rtl Read -style xilinx -f -lang vhdl -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/vhdl/Read_r 
+Execute       gen_rtl Read -style xilinx -f -lang vlog -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/verilog/Read_r 
+Execute       gen_tb_info Read -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r -p /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.19 sec.
+Execute       report -model Read -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/Read_r_csynth.rpt -f 
+Command       report done; 0.16 sec.
+Execute       report -model Read -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/Read_r_csynth.xml -f -x 
+Execute       report -model Read -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.verbose.rpt -verbose -f 
+Command       report done; 0.21 sec.
+Execute       db_write -model Read -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.adb -f 
+Command       db_write done; 0.16 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'switch_output_port_lookup' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model switch_output_port_lookup -vendor xilinx -mg_file /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/reset_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tdata_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tkeep_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tuser_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tvalid_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tready_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 's_axis_tready_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/s_axis_tlast_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tdata_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'm_axis_tdata_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tkeep_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'm_axis_tkeep_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tuser_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'm_axis_tuser_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tvalid_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'm_axis_tvalid_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tready_V' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'switch_output_port_lookup/m_axis_tlast_V' to 'ap_none'.
+WARNING: [RTGEN 206-101] Port 'm_axis_tlast_V' with mode 'ap_none' may require an associated data valid signal to correctly communicate with other blocks or a test bench; automatic C/RTL co-simulation may not be able to verify such a port.
+INFO: [RTGEN 206-500] Setting interface mode on function 'switch_output_port_lookup' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'Queue_ap_axis_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Queue_wr_pos_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Queue_rd_pos_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Queue_size' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Queue_wr_pos_V' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'Queue_rd_pos_V' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'switch_output_port_lookup_Queue_buffer_packet' to 'switch_output_porbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'switch_output_port_lookup_Queue_buffer_V' to 'switch_output_porcud' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'switch_output_port_lookup'.
+Command       create_rtl_model done; 0.88 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.71 seconds; current allocated memory: 215.351 MB.
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       gen_rtl switch_output_port_lookup -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/systemc/switch_output_port_lookup -synmodules eth lut Read switch_output_port_lookup 
+Execute       gen_rtl switch_output_port_lookup -istop -style xilinx -f -lang vhdl -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/vhdl/switch_output_port_lookup 
+Execute       gen_rtl switch_output_port_lookup -istop -style xilinx -f -lang vlog -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/verilog/switch_output_port_lookup 
+Execute       export_constraint_db -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.constraint.tcl -f -tool general 
+Execute       report -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.design.xml -verbose -f -dv 
+Command       report done; 0.67 sec.
+Execute       report -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.sdaccel.xml -verbose -f -sdaccel 
+Execute       gen_tb_info switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup -p /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db 
+Execute       report -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/switch_output_port_lookup_csynth.rpt -f 
+Execute       report -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/syn/report/switch_output_port_lookup_csynth.xml -f -x 
+Execute       report -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.verbose.rpt -verbose -f 
+Command       report done; 1.14 sec.
+Execute       db_write -model switch_output_port_lookup -o /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.adb -f 
+Command       db_write done; 0.11 sec.
+Execute       sc_get_clocks switch_output_port_lookup 
+Execute       sc_get_portdomain switch_output_port_lookup 
+INFO-FLOW: Model list for RTL component generation: eth lut Read switch_output_port_lookup
+INFO-FLOW: Handling components in module [eth] ... 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+INFO-FLOW: Handling components in module [lut] ... 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+INFO-FLOW: Handling components in module [Read_r] ... 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+INFO-FLOW: Handling components in module [switch_output_port_lookup] ... 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+INFO-FLOW: Found component switch_output_porbkb.
+INFO-FLOW: Append model switch_output_porbkb
+INFO-FLOW: Found component switch_output_porcud.
+INFO-FLOW: Append model switch_output_porcud
+INFO-FLOW: Append model eth
+INFO-FLOW: Append model lut
+INFO-FLOW: Append model Read_r
+INFO-FLOW: Append model switch_output_port_lookup
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: switch_output_porbkb switch_output_porcud eth lut Read_r switch_output_port_lookup
+INFO-FLOW: To file: write model switch_output_porbkb
+INFO-FLOW: To file: write model switch_output_porcud
+INFO-FLOW: To file: write model eth
+INFO-FLOW: To file: write model lut
+INFO-FLOW: To file: write model Read_r
+INFO-FLOW: To file: write model switch_output_port_lookup
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.17 sec.
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.21 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.21 sec.
+Command       ap_source done; 0.21 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+INFO: [RTMG 210-278] Implementing memory 'switch_output_porbkb_ram (RAM)' using block RAMs with power-on initialization.
+INFO: [RTMG 210-278] Implementing memory 'switch_output_porcud_ram (RAM)' using distributed RAMs with power-on initialization.
+Execute       get_config_sdx -target 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.29 sec.
+Execute             source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.38 sec.
+Execute           source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.4 sec.
+Command       ap_source done; 0.4 sec.
+Execute       source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/virtex7/virtex7_fpv6.gen 
+Execute         source /opt/Xilinx/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.rtl_wrap.cfg.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/eth.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/lut.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/Read_r.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.compgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.constraint.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.tbgen.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/switch_output_port_lookup.constraint.tcl 
+Execute       sc_get_clocks switch_output_port_lookup 
+Execute       source /home/khoa/Documents/logic_design/Output_port_lookup/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:46 ; elapsed = 00:02:12 . Memory (MB): peak = 545.449 ; gain = 193.391 ; free physical = 126 ; free virtual = 3449
+INFO: [SYSC 207-301] Generating SystemC RTL for switch_output_port_lookup.
+INFO: [VHDL 208-304] Generating VHDL RTL for switch_output_port_lookup.
+INFO: [VLOG 209-307] Generating Verilog RTL for switch_output_port_lookup.
+Command     autosyn done; 14.68 sec.
+Command   csynth_design done; 130.02 sec.
+Command ap_source done; 131.29 sec.
+Execute cleanup_all 
