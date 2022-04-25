@@ -95,69 +95,69 @@ void Combine(//Input
 
 
 
-void sth1(int op ,int a, int b, int &c)
-{
+// void sth1(int op ,int a, int b, int &c)
+// {
 
 
-  static int state = 0;
+//   static int state = 0;
 
 
-  switch(state)
-  {
+//   switch(state)
+//   {
 
-  case 0:{
-
-
-	  c = a + b;
-
-	 if(op)state = 1;
+//   case 0:{
 
 
+// 	  c = a + b;
 
-	  break;
-  }
-  case 1:{
-
-	  c = a - b;
-
-	  if(op)state =0;
-
-	  break;
-  }
-  default: break;
-
-
-  }
+// 	 if(op)state = 1;
 
 
 
+// 	  break;
+//   }
+//   case 1:{
 
-}
+// 	  c = a - b;
 
-void sth2(int a, int b, int &d)
-{
-	d = a - b;
-}
+// 	  if(op)state =0;
 
-
-void Combine1(int op,int a, int b, int c, int & d)
-{
-
-#pragma HLS INTERFACE ap_none port = a
-#pragma HLS INTERFACE ap_none port = b
-#pragma HLS INTERFACE ap_none port = c
-#pragma HLS INTERFACE ap_none port = d
+// 	  break;
+//   }
+//   default: break;
 
 
-	int temp;
+//   }
 
-#pragma HLS dataflow
 
-	sth1(op,a,b,temp);
 
-	sth2(temp,c,d);
 
-}
+// }
+
+// void sth2(int a, int b, int &d)
+// {
+// 	d = a - b;
+// }
+
+
+// void Combine1(int op,int a, int b, int c, int & d)
+// {
+
+// #pragma HLS INTERFACE ap_none port = a
+// #pragma HLS INTERFACE ap_none port = b
+// #pragma HLS INTERFACE ap_none port = c
+// #pragma HLS INTERFACE ap_none port = d
+
+
+// 	int temp;
+
+// #pragma HLS dataflow
+
+// 	sth1(op,a,b,temp);
+
+// 	sth2(temp,c,d);
+
+// }
 
 
 
