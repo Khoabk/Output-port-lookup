@@ -1,3 +1,3 @@
 # Output-port-lookup
 - To understand the project, please first visit our PDF HLS_report file.
-- For code viewing, 
+- The code structure are presented as in the below figure.
